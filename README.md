@@ -18,3 +18,5 @@ In a folder with the seal name, we have a folder named "DP" and the file `resolu
 >`11`<start of `k` - the minimum value of the spirals' scaling factor `k`>\
 >`12`<k_step - the step of the partition of `k`, in cm>\
 >`13`<end_k - the maximum value of the partition of `k`, in cm>
+
+The path to this txt file is fed as input to the `main_App` function and the stencil parts of the linear spiral and circle involute prototypes that best fit the data points of the `mat_file` are determined.

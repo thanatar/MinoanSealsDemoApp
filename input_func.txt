@@ -1,6 +1,6 @@
-C:\Users\darampatzis\Dropbox\Family Room\minoan_seals\sfr_apo_mena\II_2_070a\
-C:\Users\darampatzis\Dropbox\Family Room\minoan_seals\sfr_apo_mena\II_2_070a\DP\
-C:\Users\darampatzis\Dropbox\Family Room\minoan_seals\paper\HeritageScience\review\code\results\II_2_070a\
+...\II_2_070a\
+...\II_2_070a\DP\
+...\II_2_070a\results\
 aristera_entos_ekso
 120
 -1

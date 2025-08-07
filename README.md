@@ -19,13 +19,13 @@ In a folder with the seal name, we have a folder named "DP" and the file `resolu
 >`12`<k_step - the step of the partition of `k`, in cm>\
 >`13`<end_k - the maximum value of the partition of `k`, in cm>
 
-The path to this txt file is fed as input to the `main_App` function and the stencil parts of the linear spiral and circle involute prototypes that best fit the data points of the `mat_file` are determined.\
+The path to this txt file is fed as input to the `main_App` function and the stencil parts of the linear spiral and circle involute prototypes that best fit the data points of the `mat_file` are determined.
 
 The output file is a `mat` file that contains the following variables:\
-'Kappa' - the array of Archimedes' constants for which the datapoints fit to them. \
+'Kappa' - the array of Archimedes' constants for which the datapoints fit to them.\
 'analysis' - the resolution of the DataPoints and the seal under study.\
-"kommatiLS" - an array that consist of a struct with the fields:            \
-            kommatiLS.min_mean - the minimum overall distance in mm \
+"kommatiLS" - an array that consist of a struct with the fields:\
+            kommatiLS.min_mean - the minimum overall distance in mm\
             kommatiLS.min_max - the maximum distance in mm\
             kommatiLS.ls - k of the model linear spiral, in cm\
             kommatiLS.lsInd - the index of k in the Kappa array\

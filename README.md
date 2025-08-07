@@ -22,31 +22,41 @@ In a folder with the seal name, we have a folder named "DP" and the file `resolu
 The path to this txt file is fed as input to the `main_App` function and the stencil parts of the linear spiral and circle involute prototypes that best fit the data points of the `mat_file` are determined.
 
 The output file is a `mat` file that contains the following variables:
->`1`'Kappa' - the array of Archimedes' constants for which the datapoints fit to them.\
->`2`'analysis' - the resolution of the DataPoints and the seal under study.\
->`3`"kommatiLS" - an array that consist of a struct with the fields:\
-            kommatiLS.min_mean - the minimum overall distance in mm\
-            kommatiLS.min_max - the maximum distance in mm\
-            kommatiLS.ls - k of the model linear spiral, in cm\
-            kommatiLS.lsInd - the index of k in the Kappa array\
-            kommatiLS.arxiC - the index to the first point of the DataPoint array\
-            kommatiLS.telosC - the index to the last point of the DataPoint array\
-each struct of the array corresponds to the optimal fitting of a model linear spiral to the DataPoints, for the indexes of points from kommatiLS.arxiC to kommatiLS.telosC in the DataPoint array. The optimal k is given in kommatiLS.ls.\
->`4`"mikos" - the length of the greater DP for which an acceptable fitting to a model linear spiral was detected.\ 
->`5`"Mean_Max_LS" - a nx2 array, each line of which contains the minimum overall error in the first column and the maximum error in the second column, in pixels. Each pair of errors corresponds to a specific k of the Kappa array, based on the index of the related line of the array, eg Mean_Max_LS(3,:) contains the errors of fitting to a model linear spiral with k=Kappa(3), etc.\
->`6`"Mean_Max_LS_mm" - the same array as "Mean_Max_LS", but the dimensions are in mm.\
-The next three variables contain the fitting results of all k that generate involutes of a circle, for the greater determined acceptable length of DataPoints, where DP starts from point with index kommatiLS(end).arxiC and ends to point with index kommatiLS(end).telosC.\
->`7`'Mean_Max_ES_arr' a nx2 array, each line of which contains the minimum overall error in the first column and the maximum error in the second column, in pixels. Each pair of errors corresponds to a specific k of the Kappa array, based on the index of the related line of the array, eg Mean_Max_LS(3,:) contains the errors of fitting to a model involute of a circle with k=Kappa(3), etc.\
->`8`"Mean_Max_ES_mm" - the same array as "Mean_Max_ES_arr", but the dimensions are in mm.\
->`9`"kommati_es" - a struct that contains information regarding the optimal fitting of a model involute of a circle to the DP part, eg the fitting where the minimum overall distance and the maximum distance are minimized, with fields:\
-            kommati_es.min_mean - the minimum overall distance in mm for the specific k\
-            kommati_es.min_max - the maximum distance in mm for the specific k\
-            kommati_es.es - k of the optimal model involute of a circle, in cm\
-            kommati_es.esInd - the index of k in the Kappa array\
-            kommati_es.arxiC - the index to the first point of the DataPoint array \
-            kommati_es.telosC - the index to the last point of the DataPoint array\
+>`1` `Kappa` - the array of Archimedes' constants for which the datapoints fit to them.
+>
+>`2` `analysis` - the resolution of the `DataPoints` and the seal under study.
+>
+>`3` `kommatiLS` - an array that consist of a struct with the fields:
+> - `kommatiLS.min_mean` - the minimum overall distance in mm
+> - `kommatiLS.min_max` - the maximum distance in mm
+> - `kommatiLS.ls` - `k` of the model linear spiral, in cm
+> - `kommatiLS.lsInd` - the index of `k` in the `Kappa` array
+> - `kommatiLS.arxiC` - the index to the first point of the `DataPoint` array
+> - `kommatiLS.telosC` - the index to the last point of the `DataPoint` array
+>
+> each struct of the array corresponds to the optimal fitting of a model linear spiral to the `DataPoints`, for the indexes of points from `kommatiLS.arxiC` to `kommatiLS.telosC` in the `DataPoint` array. The optimal `k` is given in `kommatiLS.ls`.
+>
+>`4` `mikos` - the length of the greater DP for which an acceptable fitting to a model linear spiral was detected.
+> 
+>`5` `Mean_Max_LS` - a `n x 2` array, each line of which contains the minimum overall error in the first column and the maximum error in the second column, in pixels. Each pair of errors corresponds to a specific `k` of the `Kappa` array, based on the index of the related line of the array, eg `Mean_Max_LS(3,:)` contains the errors of fitting to a model linear spiral with `k=Kappa(3)`, etc.
+>
+>`6` `Mean_Max_LS_mm` - the same array as `Mean_Max_LS`, but the dimensions are in mm.
+>
+> The next three variables contain the fitting results of all `k` that generate involutes of a circle, for the greater determined acceptable length of `DataPoints`, where DP starts from point with index `kommatiLS(end).arxiC` and ends to point with index `kommatiLS(end).telosC`.
+>
+>`7` `Mean_Max_ES_arr` a `n x 2` array, each line of which contains the minimum overall error in the first column and the maximum error in the second column, in pixels. Each pair of errors corresponds to a specific `k` of the `Kappa` array, based on the index of the related line of the array, eg `Mean_Max_LS(3,:)` contains the errors of fitting to a model involute of a circle with `k=Kappa(3)`, etc.
+>
+>`8` `Mean_Max_ES_mm` - the same array as `Mean_Max_ES_arr`, but the dimensions are in mm.
+>
+>`9` `kommati_es` - a struct that contains information regarding the optimal fitting of a model involute of a circle to the DP part, e.g. the fitting where the minimum overall distance and the maximum distance are minimized, with fields:
+> - `kommati_es.min_mean` - the minimum overall distance in mm for the specific `k`
+> - `kommati_es.min_max` - the maximum distance in mm for the specific `k`
+> - `kommati_es.es` - `k` of the optimal model involute of a circle, in cm
+> - `kommati_es.esInd` - the index of `k` in the `Kappa` array
+> - `kommati_es.arxiC` - the index to the first point of the `DataPoint` array
+> - `kommati_es.telosC` - the index to the last point of the `DataPoint` array
 
-We also provide the script `show_k_ls_es_errors.m` to visualize the results of the application. The user provides the following input:\
->`1`<sp_path - the path to the folder where the output of mainApp was saved >\
->`2`<mat_file - the name of the output file that mainApp produced>\
+We also provide the script `show_k_ls_es_errors.m` to visualize the results of the application. The user provides the following input:
+>`1`<sp_path - the path to the folder where the output of `mainApp` was saved >\
+>`2`<mat_file - the name of the output file that `mainApp` produced>
  

@@ -8,7 +8,7 @@ In a folder with the seal name, we have a folder named "DP" and the file `resolu
 >`1`<folder_path - the path to the folder of the seal's image>\
 >`2`<DP_path - the path to the folder of the `mat` files of the seal's motifs' data points>\
 >`3`<save_path - the path to the folder where the output will be saved>\
->`4`<mat_file - the filename of the data points (DP) that will be processed>\
+>`4`<mat_file - the filename of the data points (DP) that will be processed, without the `.mat` ending>\
 >`5`<DPstart - the start of the DP, the standard value is 1>\
 >`6`<koila - a binary value of -1 or 1 for mirroring the stencil or not>\
 >`7`<min_length - the minimum length to start the search from, in cm>\

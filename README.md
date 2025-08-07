@@ -45,6 +45,7 @@ The next three variables contain the fitting results of all k that generate invo
             kommati_es.esInd - the index of k in the Kappa array\
             kommati_es.arxiC - the index to the first point of the DataPoint array \
             kommati_es.telosC - the index to the last point of the DataPoint array\
+
 We also provide the script `show_k_ls_es_errors.m` to visualize the results of the application. The user provides the following input:\
 >`1`<sp_path - the path to the folder where the output of mainApp was saved >\
 >`2`<mat_file - the name of the output file that mainApp produced>\

@@ -22,9 +22,9 @@ In a folder with the seal name, we have a folder named "DP" and the file `resolu
 The path to this txt file is fed as input to the `main_App` function and the stencil parts of the linear spiral and circle involute prototypes that best fit the data points of the `mat_file` are determined.
 
 The output file is a `mat` file that contains the following variables:\
-'Kappa' - the array of Archimedes' constants for which the datapoints fit to them.\
-'analysis' - the resolution of the DataPoints and the seal under study.\
-"kommatiLS" - an array that consist of a struct with the fields:\
+>`1`'Kappa' - the array of Archimedes' constants for which the datapoints fit to them.\
+>`2`'analysis' - the resolution of the DataPoints and the seal under study.\
+>`3`"kommatiLS" - an array that consist of a struct with the fields:\
             kommatiLS.min_mean - the minimum overall distance in mm\
             kommatiLS.min_max - the maximum distance in mm\
             kommatiLS.ls - k of the model linear spiral, in cm\
@@ -32,13 +32,13 @@ The output file is a `mat` file that contains the following variables:\
             kommatiLS.arxiC - the index to the first point of the DataPoint array \
             kommatiLS.telosC - the index to the last point of the DataPoint array\
 each struct of the array corresponds to the optimal fitting of a model linear spiral to the DataPoints, for the indexes of points from kommatiLS.arxiC to kommatiLS.telosC in the DataPoint array. The optimal k is given in kommatiLS.ls.\
-"mikos" - the length of the greater DP for which an acceptable fitting to a model linear spiral was detected.\ 
-"Mean_Max_LS" - a nx2 array, each line of which contains the minimum overall error in the first column and the maximum error in the second column, in pixels. Each pair of errors corresponds to a specific k of the Kappa array, based on the index of the related line of the array, eg Mean_Max_LS(3,:) contains the errors of fitting to a model linear spiral with k=Kappa(3), etc.\
-"Mean_Max_LS_mm" - the same array as "Mean_Max_LS", but the dimensions are in mm.\
+>`4`"mikos" - the length of the greater DP for which an acceptable fitting to a model linear spiral was detected.\ 
+>`5`"Mean_Max_LS" - a nx2 array, each line of which contains the minimum overall error in the first column and the maximum error in the second column, in pixels. Each pair of errors corresponds to a specific k of the Kappa array, based on the index of the related line of the array, eg Mean_Max_LS(3,:) contains the errors of fitting to a model linear spiral with k=Kappa(3), etc.\
+>`6`"Mean_Max_LS_mm" - the same array as "Mean_Max_LS", but the dimensions are in mm.\
 The next three variables contain the fitting results of all k that generate involutes of a circle, for the greater determined acceptable length of DataPoints, where DP starts from point with index kommatiLS(end).arxiC and ends to point with index kommatiLS(end).telosC.\
-'Mean_Max_ES_arr' a nx2 array, each line of which contains the minimum overall error in the first column and the maximum error in the second column, in pixels. Each pair of errors corresponds to a specific k of the Kappa array, based on the index of the related line of the array, eg Mean_Max_LS(3,:) contains the errors of fitting to a model involute of a circle with k=Kappa(3), etc.\
-"Mean_Max_ES_mm" - the same array as "Mean_Max_ES_arr", but the dimensions are in mm.\
-"kommati_es" - a struct that contains information regarding the optimal fitting of a model involute of a circle to the DP part, eg the fitting where the minimum overall distance and the maximum distance are minimized, with fields:\
+>`7`'Mean_Max_ES_arr' a nx2 array, each line of which contains the minimum overall error in the first column and the maximum error in the second column, in pixels. Each pair of errors corresponds to a specific k of the Kappa array, based on the index of the related line of the array, eg Mean_Max_LS(3,:) contains the errors of fitting to a model involute of a circle with k=Kappa(3), etc.\
+>`8`"Mean_Max_ES_mm" - the same array as "Mean_Max_ES_arr", but the dimensions are in mm.\
+>`9`"kommati_es" - a struct that contains information regarding the optimal fitting of a model involute of a circle to the DP part, eg the fitting where the minimum overall distance and the maximum distance are minimized, with fields:\
             kommati_es.min_mean - the minimum overall distance in mm for the specific k\
             kommati_es.min_max - the maximum distance in mm for the specific k\
             kommati_es.es - k of the optimal model involute of a circle, in cm\

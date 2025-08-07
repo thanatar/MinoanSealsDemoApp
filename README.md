@@ -21,7 +21,7 @@ In a folder with the seal name, we have a folder named "DP" and the file `resolu
 
 The path to this txt file is fed as input to the `main_App` function and the stencil parts of the linear spiral and circle involute prototypes that best fit the data points of the `mat_file` are determined.
 
-The output file is a `mat` file that contains the following variables:\
+The output file is a `mat` file that contains the following variables:
 >`1`'Kappa' - the array of Archimedes' constants for which the datapoints fit to them.\
 >`2`'analysis' - the resolution of the DataPoints and the seal under study.\
 >`3`"kommatiLS" - an array that consist of a struct with the fields:\
@@ -29,7 +29,7 @@ The output file is a `mat` file that contains the following variables:\
             kommatiLS.min_max - the maximum distance in mm\
             kommatiLS.ls - k of the model linear spiral, in cm\
             kommatiLS.lsInd - the index of k in the Kappa array\
-            kommatiLS.arxiC - the index to the first point of the DataPoint array \
+            kommatiLS.arxiC - the index to the first point of the DataPoint array\
             kommatiLS.telosC - the index to the last point of the DataPoint array\
 each struct of the array corresponds to the optimal fitting of a model linear spiral to the DataPoints, for the indexes of points from kommatiLS.arxiC to kommatiLS.telosC in the DataPoint array. The optimal k is given in kommatiLS.ls.\
 >`4`"mikos" - the length of the greater DP for which an acceptable fitting to a model linear spiral was detected.\ 

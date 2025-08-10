@@ -3,7 +3,7 @@
 
 "**Archimedes’ spirals appear with impressive precision on Late Neolithic and Bronze Age Aegean Seals**"
 
-In a folder with the seal name, we have a folder named "DP" and the file `resolution.txt` with the resolution of the seal's image. In a txt file, like `input_func.txt`, we provide each of the following parameters, indicated by <...>, in a corresponding line, in the same order:
+In the folders with the corrseponding seals' names, we have a folder named "DP_unique","DP_non_unique" and the file `resolution.txt` with the resolution of the seal's image. In a txt file, like `input_func.txt`, we provide each of the following parameters, indicated by <...>, in a corresponding line, in the same order:
 
 >`1`<folder_path - the path to the folder of the seal's image>\
 >`2`<DP_path - the path to the folder of the `mat` files of the seal's motifs' data points>\
@@ -60,3 +60,4 @@ We also provide the script `show_k_ls_es_errors.m` to visualize the results of t
 >`1`<sp_path - the path to the folder where the output of `mainApp` was saved >\
 >`2`<mat_file - the name of the output file that `mainApp` produced>
  
+We would like to stress that we have also provided the images for the studied seals, which are freely available in [text](https://arachne.dainst.org).

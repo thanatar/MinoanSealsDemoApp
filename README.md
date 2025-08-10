@@ -60,4 +60,4 @@ We also provide the script `show_k_ls_es_errors.m` to visualize the results of t
 >`1`<sp_path - the path to the folder where the output of `mainApp` was saved >\
 >`2`<mat_file - the name of the output file that `mainApp` produced>
  
-We would like to stress that we have also provided the images for the studied seals, which are freely available in [text](https://arachne.dainst.org).
+We would like to stress that we have also provided the images for the studied seals, which are freely available in [the link](https://arachne.dainst.org).

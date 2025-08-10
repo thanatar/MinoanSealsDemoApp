@@ -1,8 +1,14 @@
 function main_App(txtfile)
+%   we test a given DP against all k=start of k:k_step:end_k generating
+%   Archimedean Spirals and we choose the part of DP having the greater
+%   length that satisfies Cond.1. For this DP part we test how well
+%   involutes of a circle fit to it, with kIC= start of k:k_step:end_k.
+%   For detailed documentation on the output file and the inputs, read
+%   README.md.
 
-% in a folder with the seal name, we have a folder named "DP" and the file 
+% in a folder with the seal name, we have a folder named "DP" and the file
 % "resolution.txt" with the resolution of the seal's image. In a txt file,
-% we fill each of the following parameters, indicated by <...>, in a corresponding line, 
+% we fill each of the following parameters, indicated by <...>, in a corresponding line,
 % in the same order:
 %     <folder_path>
 %     <DP_path>
@@ -24,10 +30,6 @@ fid = fopen(txtfile,"r");
 if(fid<0)
     disp('no file exists.');
 else
-    %elegxoume ola ta k thw grammikis speiras poy anikoun apo arxi_k ws telos_k me
-    %bhma k_bima, gia sugkekrimeno kommati speiras. Typwnontai ta apotelesmata
-    %kai apothikeuontai se .mat mesa ston fakelo ths sfragidas.
-    
     folder_path = fgetl(fid);
     DP_path = fgetl(fid);
     savepath1 = fgetl(fid);
